@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إذاعة قراء العرب | صوت القرآن العظيم</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <!-- شريط التحكم العائم -->
+    <div id="radio-control-bar" class="control-bar">
+        <div class="control-info">
+            <div id="now-playing">غير مشغل حالياً</div>
+            <div class="reader-name" id="current-reader">---</div>
+        </div>
+        <div class="control-buttons">
+            <button id="play-pause-btn" class="ctrl-btn" title="تشغيل / إيقاف">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="stop-btn" class="ctrl-btn stop-btn" title="إيقاف الكل">
+                <i class="fas fa-stop"></i>
+            </button>
+            <button id="volume-btn" class="ctrl-btn" title="الصوت">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <input type="range" id="volume-slider" min="0" max="100" value="80" title="مستوى الصوت">
+        </div>
+        <div class="station-switcher">
+            <button id="prev-station" class="switch-btn" title="الإذاعة السابقة"><i class="fas fa-chevron-right"></i></button>
+            <span id="current-station-name">اختر إذاعة</span>
+            <button id="next-station" class="switch-btn" title="الإذاعة التالية"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </div>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-quran logo-icon"></i>
+                <h1>قرّاء العرب</h1>
+                <p class="tagline">نغمة الإيمان في كل بيت</p>
+            </div>
+            <nav class="main-nav">
+                <a href="#home" class="nav-link active">الرئيسية</a>
+                <a href="#stations" class="nav-link">الإذاعات</a>
+                <a href="#readers" class="nav-link">القرّاء</a>
+                <a href="#about" class="nav-link">من نحن</a>
+                <a href="#contact" class="nav-link">اتصل بنا</a>
+            </nav>
+            <button id="theme-toggle" class="theme-btn" title="تبديل الوضع">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- القسم الرئيسي -->
+    <main class="container">
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h2>استمع لأجمل أصوات القرآن الكريم</h2>
+                <p>أكثر من 50 قارئًا و 20 إذاعة قرآنية مختارة بعناية لتوفير تجربة سماع نقية وهادئة للقلوب.</p>
+                <a href="#stations" class="cta-button">ابدأ الاستماع الآن <i class="fas fa-headphones"></i></a>
+            </div>
+            <div class="hero-image">
+                <div class="decoration-circle"></div>
+                <i class="fas fa-broadcast-tower hero-icon"></i>
+            </div>
+        </section>
+
+        <!-- قسم الإذاعات -->
+        <section id="stations" class="section">
+            <h2 class="section-title"><i class="fas fa-radio"></i> إذاعاتنا القرآنية</h2>
+            <p class="section-subtitle">اختر من بين أبرز الإذاعات المتخصصة في بث القرآن الكريم</p>
+            
+            <div class="stations-grid" id="stations-container">
+                <!-- سيتم ملؤها بالجافاسكريبت -->
+            </div>
+        </section>
+
+        <!-- قسم القراء -->
+        <section id="readers" class="section">
+            <h2 class="section-title"><i class="fas fa-users"></i> أشهر القرّاء</h2>
+            <p class="section-subtitle">استمع لتلاوات متنوعة بأصوات أبرز قراء العالم العربي</p>
+            
+            <div class="readers-grid" id="readers-container">
+                <!-- سيتم ملؤها بالجافاسكريبت -->
+            </div>
+        </section>
+    </main>
+
+    <!-- الفوتر -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-section">
+                <h3><i class="fas fa-quran"></i> قرّاء العرب</h3>
+                <p>مشروع غير هادف للربح، يهدف لنشر القرآن الكريم وتلاوته بصورة نقية وواضحة.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <a href="#stations">الإذاعات</a>
+                <a href="#readers">القراء</a>
+                <a href="#about">من نحن</a>
+                <a href="#contact">دعم المشروع</a>
+            </div>
+            <div class="footer-section">
+                <h3>معلومات التواصل</h3>
+                <p><i class="fas fa-envelope"></i> info@quranalarab.com</p>
+                <p><i class="fas fa-phone"></i> +966 123 456 789</p>
+                <p class="copyright">© 2023 قرّاء العرب. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- نافذة التنبيه -->
+    <div id="alert-modal" class="alert-modal">
+        <div class="alert-content">
+            <i class="fas fa-info-circle alert-icon"></i>
+            <p id="alert-message">يتم الآن تشغيل إذاعة القرآن الكريم</p>
+            <button id="close-alert" class="alert-btn">حسناً</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
